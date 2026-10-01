@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+//swap using references
+void swapRef(int &a,int &b)
+{
+int t=a;a=b;b=t;
+}
+//swap using pointers
+void swapPtr(int *a,int *b)
+{
+    int t=*a;*a=*b;*b=t;
+}
+int main()
+{
+    int x=10,y=20;
+swapRef(x,y);
+cout<<"after swapRef: x="<<x<<",y="<<y<<endl;
+swapPtr(&x,&y);
+cout<<"after swapPtr:x="<<x<<",y="<<y<<endl;
+int &alias=x;
+alias=99;
+cout<<"x after alias="<<x<<endl;
+return 0;
+}
