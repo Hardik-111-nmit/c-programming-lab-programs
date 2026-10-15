@@ -23,4 +23,4 @@ int main() {
     shift(a); a.show();                
     tryShift(b); b.show();             
     return 0;
-}
+    
